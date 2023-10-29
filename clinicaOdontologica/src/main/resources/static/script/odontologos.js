@@ -1,0 +1,34 @@
+function enviarDatos() {
+console.log("enviarDatos odontologo");
+    const datosOdontologo = {
+      matricula: document.getElementById('matricula').value,
+      nombre: document.getElementById('nombre').value,
+      apellido: document.getElementById('apellido').value
+    };
+
+    const urlServicio = 'http://localhost:8081/odontologos/registrar'
+
+    const opciones = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(datosOdontologo)
+    };
+
+    fetch(urlServicio, opciones)
+      .then(response => {
+        if (!response.ok) {
+          alert ('Error en la solicitud');
+          throw new Error('Error en la solicitud al servicio odontologos');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const id_response = "El ID del odontólogo " + data.nombre + " " + data.apellido + " es " + data.id;
+        alert(id_response);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }

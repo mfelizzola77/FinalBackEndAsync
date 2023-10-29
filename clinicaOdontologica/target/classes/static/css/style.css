@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+#clinic-name {
+    color: #0a0a0a;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#clinic-image {
+    max-width: 20%;
+    height: auto;
+}
+
+#button-container {
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #52a4ff;
+    color: #0a0a0a;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #357ebd;
+}
+
+#input-data {
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
